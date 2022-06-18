@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+html body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.nav ul li {
+  list-style: none;
+  padding-left: 3vw;
+}
+.nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 18vw;
+  padding-top: 1vw;
+  background-color: white;
+  border-bottom: 3px solid #1ebab7;
+  z-index: 1;
+}
+#header .logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+}
+#header .logo-container img {
+  display: flex;
+  align-items: center;
+  height: 3.3vw;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+#header .nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+#header .nav ul {
+  display: flex;
+}
+#header .nav ul li {
+  padding: 0 0.8vw;
+}
+#header .nav ul li a {
+  color: black;
+  padding: 0.2vw 0;
+  opacity: 0.85;
+  font-weight: 500;
+  font-size: 1.1vw;
+}
+#header .nav ul li a:hover {
+  border-bottom: 2px solid #e01b6c;
+  color: #e01b6c;
+  opacity: 1;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  background: url(../images/home1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 20vw;
+  height: 95vh;
+}
+#home .dark-overlay {
+  color: white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+#home .dark-overlay .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+}
+#home .dark-overlay .text-container h2 {
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+  text-justify: center;
+  margin-bottom: 0.5vw;
+}
+#home .dark-overlay .text-container h2 strong {
+  font-size: 1em;
+  font-weight: 500;
+  color: #e01b6c;
+}
+#home .dark-overlay .text-container p {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1.5em;
+  opacity: 0.8;
+  margin-bottom: 1vw;
+}
+#home .dark-overlay .text-container a {
+  border: 0.2vw solid white;
+  border-radius: 0.2vw;
+  padding: 0.7vw 3.5vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+#home .dark-overlay .text-container a:hover {
+  background-color: #e01b6c;
+  border-color: #e01b6c;
+}
+
+#about {
+  padding: 4vw 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#about h2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 4vw;
+}
+#about .text-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-size: 1vw;
+}
+#about .text-container p {
+  text-align: justify;
+  text-justify: center;
+  font-size: 1em;
+  line-height: 1.4em;
+  opacity: 0.8;
+  font-weight: 500;
+}
+#about .text-container strong {
+  color: #e01b6c;
+}
+#about .image-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+#about .image-container img {
+  display: flex;
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: brightness(1.2);
+}
+
+/*# sourceMappingURL=main.css.map */

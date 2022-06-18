@@ -1,0 +1,72 @@
+@import "./base/typography";
+@import "./utils/variables";
+
+// The header and footer are common to all the pages
+@import "./layout/header";
+@import "./layout/footer";
+@import "./components/loaders.scss";
+
+// Homepage Architecture
+// Importing Homepage partials
+@import "./pages/home-page";
+
+/******Header*********/
+
+#loader {
+  @include hompepageLoader;
+}
+
+#home-page-presentation {
+  @include home-page-style;
+}
+/******Footer*******/
+
+// Product page Architecture
+// Importing Product page partials
+@import "./pages/product-page";
+
+/******Header*********/
+#product-page-presentation {
+  @include product-page-style;
+}
+/******Footer*******/
+
+// added to cart page Architecture
+// Importing added to cart page partials
+
+@import "./pages/added-to-cart";
+/******Header*********/
+#added-to-cart-presentation {
+  @include added-to-cart-style;
+}
+/******Footer*******/
+
+// cart presentation Architecture
+// Importing cart page partials
+
+@import "./pages/cart";
+/******Header*********/
+#cart-presentation {
+  @include cart-presentation-style;
+}
+/******Footer*******/
+
+// cart form page Architecture
+// Importing cart form page partials
+@import "./pages/cart-form";
+
+/******Header*********/
+#cart-form-presentation {
+  @include cart-form-style;
+}
+/******Footer*******/
+
+// Product page Architecture
+// Importing Product page partials
+@import "./pages/order-confirmation";
+
+/******Header*********/
+#order-confirmation-presentation {
+  @include order-confirmation-style;
+}
+/******Footer*******/

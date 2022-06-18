@@ -1,0 +1,115 @@
+#header {
+  // background-color: $color--7;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 18vw;
+  padding-top: 1vw;
+  background-color: white;
+  border-bottom: 3px solid $color--1;
+  z-index: 1;
+  // box-shadow: 0 0 0.2vw $color--7;
+  .logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20%;
+    & img {
+      display: flex;
+      align-items: center;
+      height: 3.3vw;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    & ul {
+      display: flex;
+      & li {
+        padding: 0 0.8vw;
+        & a {
+          color: black;
+          padding: 0.2vw 0;
+          opacity: 0.85;
+          font-weight: 500;
+          font-size: 1.1vw;
+          &:hover {
+            border-bottom: 2px solid $color--10;
+            color: $color--10;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  background: url(../images/home1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 20vw;
+  height: 95vh;
+  .dark-overlay {
+    color: white;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1vw;
+      & h2 {
+        text-align: center;
+        width: 100%;
+        font-size: 2em;
+        text-justify: center;
+        margin-bottom: 0.5vw;
+        // font-weight: 400;
+        & strong {
+          font-size: 1em;
+          font-weight: 500;
+          color: $color--10;
+        }
+      }
+
+      & p {
+        text-align: center;
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 1.5em;
+        opacity: 0.8;
+        margin-bottom: 1vw;
+      }
+
+      & a {
+        border: 0.2vw solid white;
+        border-radius: 0.2vw;
+        padding: 0.7vw 3.5vw;
+        font-size: 1.2vw;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-color: $color--10;
+          border-color: $color--10;
+        }
+      }
+    }
+  }
+}
