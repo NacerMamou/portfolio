@@ -12,3 +12,21 @@ $color--7: #29003c;
 $color--8: #f9efe5;
 $color--9: #f5f5f5;
 $color--10: #e01b6c;
+
+$border-color--1: #f2f2f2;
+
+$icon-background--1: #1ebab7;
+$icon-background--2: #ecbe00;
+
+$circle-diameter: 20vw;
+$topic-diameter: 4.5vw;
+
+$topic-radius: ($topic-diameter/2);
+$position-type--1: -($topic-radius);
+$position-type--2: ($circle-diameter/2) - ($topic-radius);
+$position-type--3: $circle-diameter - ($topic-radius);
+$position-type--4: ($topic-diameter * 3) + 1vw;
+$position-type--5: 0.2vw;
+$position-type--6: 1vw;
+
+$animation-duration: 10s;

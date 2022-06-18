@@ -138,6 +138,22 @@ html body {
   border-color: #e01b6c;
 }
 
+@keyframes forward-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes backward-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 #about {
   padding: 4vw 20vw;
   display: flex;
@@ -146,20 +162,36 @@ html body {
   flex-wrap: wrap;
   width: 100%;
 }
-#about h2 {
+#about .image-container {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  font-weight: 400;
-  font-size: 3em;
-  text-align: center;
-  margin-bottom: 4vw;
+  align-items: center;
+  width: 50%;
+  padding-left: 10vw;
+  height: 22vw;
+  padding-top: 3vw;
+}
+#about .image-container img {
+  display: flex;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: brightness(1.2);
 }
 #about .text-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   font-size: 1vw;
+}
+#about .text-container h2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.8vw;
+  text-align: center;
+  margin-bottom: 2vw;
 }
 #about .text-container p {
   text-align: justify;
@@ -172,18 +204,197 @@ html body {
 #about .text-container strong {
   color: #e01b6c;
 }
-#about .image-container {
+#about .education {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 3vw;
+}
+#about .education h2 {
+  display: flex;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.8vw;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+#about .education .topic-container {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  margin-bottom: 1vw;
+  border-radius: 0.35vw;
+  border: 0.18vw solid #f2f2f2;
 }
-#about .image-container img {
+#about .education .topic-container .header {
   display: flex;
-  width: 18vw;
-  height: 18vw;
+  flex-direction: column;
+  width: 70%;
+  padding: 0.65vw;
+}
+#about .education .topic-container .header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.45vw;
+  height: 1.45vw;
+  border-radius: 0.15vw;
+  color: white;
+  background-color: #1ebab7;
+  font-weight: 900;
+  margin-bottom: 0.4vw;
+}
+#about .education .topic-container .header .sorbonne {
+  background-color: #ecbe00;
+}
+#about .education .topic-container .header .name {
+  margin-bottom: 0.2vw;
+  font-size: 1.2vw;
+}
+#about .education .topic-container .header .title {
+  margin-bottom: 0.6vw;
+  font-weight: 600;
+  font-size: 0.75vw;
+  color: #b900af;
+}
+#about .education .topic-container .header .location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2vw;
+}
+#about .education .topic-container .header .location i {
+  display: flex;
+  align-items: center;
+  font-size: 0.8vw;
+  color: gray;
+  margin-right: 0.5vw;
+}
+#about .education .topic-container .header .location p {
+  display: flex;
+  align-items: center;
+  font-size: 0.7vw;
+  font-weight: 600;
+  color: gray;
+}
+#about .education .topic-container .header .date {
+  display: flex;
+  align-items: center;
+}
+#about .education .topic-container .header .date i {
+  display: flex;
+  align-items: center;
+  font-size: 0.8vw;
+  margin-right: 0.5vw;
+  color: gray;
+}
+#about .education .topic-container .header .date p {
+  display: flex;
+  align-items: center;
+  font-size: 0.7vw;
+  font-weight: 600;
+  color: gray;
+}
+#about .education .topic-container img {
+  display: flex;
+  width: 35%;
+  height: 9vw;
+  z-index: -1;
+  padding: 0.25vw;
+  border-radius: 0 0.45vw 0.45vw 0;
+  object-fit: cover;
+}
+#about .skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 7vw;
+}
+#about .skills:hover .circle {
+  animation: backward-rotation 10s linear infinite forwards;
+}
+#about .skills:hover .circle .title {
+  animation: forward-rotation 10s linear infinite forwards;
+}
+#about .skills:hover .circle .rounded-topic {
+  animation: forward-rotation 10s linear infinite forwards;
+}
+#about .skills .circle {
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  border: 1px solid #1ebab7;
+  background: linear-gradient(45deg, #f9efe5, #1ebab7);
+  transform-origin: 50% 50%;
+  animation: forward-rotation 10s linear infinite forwards;
+}
+#about .skills .circle .title {
+  position: absolute;
+  top: 9vw;
+  left: 5.2vw;
+  font-weight: 600;
+  font-size: 1.8vw;
+  color: #e01b6c;
+  animation: backward-rotation 10s linear infinite forwards;
+}
+#about .skills .circle .rounded-topic {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 4.5vw;
+  width: 4.5vw;
+  font-size: 1vw;
+  font-weight: 700;
+  background: linear-gradient(45deg, #1ebab7, white);
+  border: 1px solid #1ebab7;
+  background-color: white;
+  transform-origin: 50% 50%;
+  animation: backward-rotation 10s linear infinite forwards;
+}
+#about .skills .circle .rounded-topic img {
+  display: flex;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  filter: brightness(1.2);
+}
+#about .skills .circle .node {
+  top: -2.25vw;
+  left: 7.75vw;
+}
+#about .skills .circle .react {
+  top: 7.75vw;
+  left: -2.25vw;
+}
+#about .skills .circle .javascript {
+  top: 7.75vw;
+  left: 17.75vw;
+}
+#about .skills .circle .cpp {
+  top: 17.75vw;
+  left: 7.75vw;
+}
+#about .skills .circle .git {
+  top: 14.5vw;
+  left: 14.5vw;
+}
+#about .skills .circle .bootstrap {
+  top: 14.5vw;
+  left: 0.2vw;
+}
+#about .skills .circle .css {
+  top: 1vw;
+  left: 14.5vw;
+}
+#about .skills .circle .html {
+  top: 1vw;
+  left: 0.2vw;
 }
 
 /*# sourceMappingURL=main.css.map */
