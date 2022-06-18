@@ -1,11 +1,9 @@
 @keyframes forward-rotation {
   0% {
     transform: rotate(0deg);
-    // background: linear-gradient(45deg, $color--8, $color--1);
   }
   100% {
     transform: rotate(360deg);
-    // background: linear-gradient(0deg, $color--1, $color--2);
   }
 }
 
@@ -48,7 +46,6 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    font-size: 1vw;
     & h2 {
       display: flex;
       width: 100%;
@@ -61,10 +58,11 @@
     & p {
       text-align: justify;
       text-justify: center;
-      font-size: 1em;
-      line-height: 1.4em;
+      font-size: 0.9vw;
+      line-height: 1.4vw;
       opacity: 0.8;
-      font-weight: 500;
+      // font-weight: 700;
+      // color: grey;
     }
     & strong {
       color: $color--10;
@@ -74,7 +72,6 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-top: 3vw;
     // border: 1px solid black;
     & h2 {
       display: flex;
@@ -177,21 +174,6 @@
     justify-content: center;
     align-items: center;
     width: 50%;
-    margin-top: 7vw;
-    &:hover {
-      .circle {
-        animation: backward-rotation $animation-duration linear infinite
-          forwards;
-        .title {
-          animation: forward-rotation $animation-duration linear infinite
-            forwards;
-        }
-        .rounded-topic {
-          animation: forward-rotation $animation-duration linear infinite
-            forwards;
-        }
-      }
-    }
     // border: 1px solid black;
     .circle {
       // border: 0.08vw solid black;
@@ -203,7 +185,7 @@
       border: 1px solid $color--1;
       background: linear-gradient(45deg, $color--8, $color--1);
       transform-origin: 50% 50%;
-      animation: forward-rotation $animation-duration linear infinite forwards;
+      animation: forward-rotation $animation-duration ease-in-out infinite;
       .title {
         position: absolute;
         top: 9vw;
@@ -211,8 +193,7 @@
         font-weight: 600;
         font-size: 1.8vw;
         color: $color--10;
-        animation: backward-rotation $animation-duration linear infinite
-          forwards;
+        animation: backward-rotation $animation-duration ease-in-out infinite;
       }
       .rounded-topic {
         position: absolute;
@@ -226,31 +207,39 @@
         width: $topic-diameter;
         font-size: 1vw;
         font-weight: 700;
-        background: linear-gradient(45deg, $color--1, white);
+        // background: linear-gradient(45deg, $color--1, white);
         border: 1px solid $color--1;
         background-color: white;
         transform-origin: 50% 50%;
-        animation: backward-rotation $animation-duration linear infinite
-          forwards;
+        animation: backward-rotation $animation-duration ease-in-out infinite;
         & img {
           display: flex;
           width: 100%;
           height: 100%;
-          border-radius: 50%;
+          // border-radius: 50%;
           object-fit: cover;
         }
       }
       .node {
         top: $position-type--1;
         left: $position-type--2;
+        & img {
+          transform: scale(0.8);
+        }
       }
       .react {
         top: $position-type--2;
         left: $position-type--1;
+        & img {
+          transform: scale(0.7);
+        }
       }
       .javascript {
         top: $position-type--2;
         left: $position-type--3;
+        & img {
+          transform: scale(0.7);
+        }
       }
       .cpp {
         top: $position-type--3;
@@ -263,6 +252,9 @@
       .bootstrap {
         top: $position-type--4;
         left: $position-type--5;
+        & img {
+          transform: scale(0.8);
+        }
       }
       .css {
         top: $position-type--6;
@@ -271,6 +263,9 @@
       .html {
         top: $position-type--6;
         left: $position-type--5;
+        & img {
+          transform: scale(0.8);
+        }
       }
     }
   }

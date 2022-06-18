@@ -182,7 +182,6 @@ html body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  font-size: 1vw;
 }
 #about .text-container h2 {
   display: flex;
@@ -196,10 +195,9 @@ html body {
 #about .text-container p {
   text-align: justify;
   text-justify: center;
-  font-size: 1em;
-  line-height: 1.4em;
+  font-size: 0.9vw;
+  line-height: 1.4vw;
   opacity: 0.8;
-  font-weight: 500;
 }
 #about .text-container strong {
   color: #e01b6c;
@@ -208,7 +206,6 @@ html body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin-top: 3vw;
 }
 #about .education h2 {
   display: flex;
@@ -309,16 +306,6 @@ html body {
   justify-content: center;
   align-items: center;
   width: 50%;
-  margin-top: 7vw;
-}
-#about .skills:hover .circle {
-  animation: backward-rotation 10s linear infinite forwards;
-}
-#about .skills:hover .circle .title {
-  animation: forward-rotation 10s linear infinite forwards;
-}
-#about .skills:hover .circle .rounded-topic {
-  animation: forward-rotation 10s linear infinite forwards;
 }
 #about .skills .circle {
   width: 20vw;
@@ -329,7 +316,7 @@ html body {
   border: 1px solid #1ebab7;
   background: linear-gradient(45deg, #f9efe5, #1ebab7);
   transform-origin: 50% 50%;
-  animation: forward-rotation 10s linear infinite forwards;
+  animation: forward-rotation 15s ease-in-out infinite;
 }
 #about .skills .circle .title {
   position: absolute;
@@ -338,7 +325,7 @@ html body {
   font-weight: 600;
   font-size: 1.8vw;
   color: #e01b6c;
-  animation: backward-rotation 10s linear infinite forwards;
+  animation: backward-rotation 15s ease-in-out infinite;
 }
 #about .skills .circle .rounded-topic {
   position: absolute;
@@ -351,30 +338,37 @@ html body {
   width: 4.5vw;
   font-size: 1vw;
   font-weight: 700;
-  background: linear-gradient(45deg, #1ebab7, white);
   border: 1px solid #1ebab7;
   background-color: white;
   transform-origin: 50% 50%;
-  animation: backward-rotation 10s linear infinite forwards;
+  animation: backward-rotation 15s ease-in-out infinite;
 }
 #about .skills .circle .rounded-topic img {
   display: flex;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
 }
 #about .skills .circle .node {
   top: -2.25vw;
   left: 7.75vw;
 }
+#about .skills .circle .node img {
+  transform: scale(0.8);
+}
 #about .skills .circle .react {
   top: 7.75vw;
   left: -2.25vw;
 }
+#about .skills .circle .react img {
+  transform: scale(0.7);
+}
 #about .skills .circle .javascript {
   top: 7.75vw;
   left: 17.75vw;
+}
+#about .skills .circle .javascript img {
+  transform: scale(0.7);
 }
 #about .skills .circle .cpp {
   top: 17.75vw;
@@ -388,6 +382,9 @@ html body {
   top: 14.5vw;
   left: 0.2vw;
 }
+#about .skills .circle .bootstrap img {
+  transform: scale(0.8);
+}
 #about .skills .circle .css {
   top: 1vw;
   left: 14.5vw;
@@ -395,6 +392,99 @@ html body {
 #about .skills .circle .html {
   top: 1vw;
   left: 0.2vw;
+}
+#about .skills .circle .html img {
+  transform: scale(0.8);
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  padding: 4vw 20vw;
+}
+#projects h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8vw;
+  margin-bottom: 3vw;
+}
+#projects .projects-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#projects .projects-container .project-topic {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  position: relative;
+  height: 15vw;
+  overflow: hidden;
+  border-radius: 0.1vw;
+  box-shadow: 0 0 0.05vw #72e191;
+}
+#projects .projects-container .project-topic img {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#projects .projects-container .project-topic:hover .text-top {
+  top: 0;
+}
+#projects .projects-container .project-topic:hover .text-bottom {
+  top: 50%;
+}
+#projects .projects-container .project-topic .text-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1.2vw;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  background-color: #f5f5f5;
+  transition: all 0.4s ease-in-out;
+}
+#projects .projects-container .project-topic .text-top h3 {
+  font-size: 1.2vw;
+  margin-bottom: 0.2vw;
+}
+#projects .projects-container .project-topic .text-top p {
+  color: #e01b6c;
+}
+#projects .projects-container .project-topic .text-bottom {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  padding-top: 1.2vw;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f5f5f5;
+  transition: all 0.4s ease-in-out;
+}
+#projects .projects-container .project-topic .text-bottom a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.15vw;
+  width: 52%;
+  text-decoration: none;
+  color: black;
+  height: 2.2vw;
+  font-weight: 500;
+  border: 0.12vw solid #e01b6c;
+  transition: all 0.4s ease-in-out;
+}
+#projects .projects-container .project-topic .text-bottom a:hover {
+  background-color: #e01b6c;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
