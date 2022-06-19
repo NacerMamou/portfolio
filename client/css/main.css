@@ -34,7 +34,7 @@ html body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 18vw;
+  padding: 0 20vw;
   padding-top: 1vw;
   background-color: white;
   border-bottom: 3px solid #1ebab7;
@@ -397,17 +397,29 @@ html body {
   transform: scale(0.8);
 }
 
+@keyframes project-details-pop-up {
+  0% {
+    display: none;
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 #projects {
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
-  padding: 4vw 20vw;
+  padding: 6vw 20vw;
 }
 #projects h2 {
   display: flex;
   justify-content: center;
   font-size: 1.8vw;
-  margin-bottom: 3vw;
+  margin-bottom: 4vw;
 }
 #projects .projects-container {
   display: flex;
@@ -485,6 +497,142 @@ html body {
 #projects .projects-container .project-topic .text-bottom a:hover {
   background-color: #e01b6c;
   color: white;
+}
+#projects .project-details {
+  position: fixed;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 29vw;
+  z-index: 2;
+  display: none;
+}
+#projects .project-details .dark-overlay {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 85%;
+  margin-top: 5vw;
+  animation: project-details-pop-up 0.3s linear;
+}
+#projects .project-details .dark-overlay .caroussel {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  position: relative;
+  border-radius: 0.5vw 0.5vw 0;
+}
+#projects .project-details .dark-overlay .caroussel .left-arrow {
+  caret-color: transparent;
+  display: flex;
+  cursor: pointer;
+  width: 3vw;
+  height: 3vw;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.3vw;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  border-radius: 0 0.3vw 0.3vw 0;
+}
+#projects .project-details .dark-overlay .caroussel .right-arrow {
+  caret-color: transparent;
+  display: flex;
+  cursor: pointer;
+  width: 3vw;
+  height: 3vw;
+  font-weight: 600;
+  font-size: 1.5vw;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  border-radius: 0.3vw 0 0 0;
+}
+#projects .project-details .dark-overlay .caroussel .exit {
+  caret-color: transparent;
+  display: flex;
+  cursor: pointer;
+  width: 3vw;
+  height: 3vw;
+  font-weight: 600;
+  font-size: 1.3vw;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  border-radius: 0 0.3vw 0 0.3vw;
+}
+#projects .project-details .dark-overlay .caroussel img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 0.3vw 0.3vw 0 0;
+}
+#projects .project-details .dark-overlay .text-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #f5f5f5;
+  min-height: 40%;
+  padding: 2vw 1.5vw;
+  border-radius: 0 0 0.3vw 0.3vw;
+  border-top: 0.3vw solid black;
+}
+#projects .project-details .dark-overlay .text-container .h-line {
+  display: flex;
+  width: 96%;
+  border-top: 0.05vw solid grey;
+}
+#projects .project-details .dark-overlay .text-container .github {
+  background-color: black;
+}
+#projects .project-details .dark-overlay .text-container h4 {
+  width: 100%;
+  font-size: 1.5vw;
+}
+#projects .project-details .dark-overlay .text-container h5 {
+  width: 100%;
+  font-size: 1vw;
+  color: grey;
+  border-bottom: 0.01vw solid grey;
+  margin-bottom: 0.7vw;
+  padding-bottom: 0.7vw;
+}
+#projects .project-details .dark-overlay .text-container a {
+  text-decoration: none;
+  color: white;
+  background-color: #e01b6c;
+  width: 18%;
+  height: 1.5vw;
+  border-radius: 0.2vw;
+  margin-right: 0.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.7vw;
+}
+#projects .project-details .dark-overlay .text-container .description {
+  width: 100%;
+  text-justify: auto;
+  font-size: 0.8vw;
+  line-height: 1vw;
+  margin-bottom: 0.4vw;
 }
 
 /*# sourceMappingURL=main.css.map */
