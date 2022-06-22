@@ -130,13 +130,13 @@
     <section id="projects">
       <h2 class="title">PROJECTS</h2>
 
-      <div class="projects-container">
-        <div class="project-topic">
+      <div class="projects-container" id="projects-container">
+        <!-- <div class="project-topic">
           <div class="text-top">
             <h3>Show Now Ordering</h3>
             <p>React / Node.js</p>
           </div>
-          <img src="./images/home.jpg" alt="" />
+          <img src="./images/piquante1.PNG" alt="" />
           <div class="text-bottom">
             <a href="" class="project-learn-more">LEARNE MORE</a>
           </div>
@@ -147,7 +147,7 @@
             <h3>Show Now Ordering</h3>
             <p>React/Node.js</p>
           </div>
-          <img src="./images/home1.jpg" alt="" />
+          <img src="./images/pingpong.PNG" alt="" />
           <div class="text-bottom">
             <a href="" class="project-learn-more"> LEARNE MORE </a>
           </div>
@@ -158,7 +158,7 @@
             <h3>Show Now Ordering</h3>
             <p>React/Node.js</p>
           </div>
-          <img src="./images/openclassrooms.PNG" alt="" />
+          <img src="./images/missioncontrol1.PNG" alt="" />
           <div class="text-bottom">
             <a href="" class="project-learn-more"> LEARNE MORE </a>
           </div>
@@ -169,7 +169,7 @@
             <h3>Show Now Ordering</h3>
             <p>React/Node.js</p>
           </div>
-          <img src="./images/openclassrooms.PNG" alt="" />
+          <img src="./images/ohmyfood1.PNG" alt="" />
           <div class="text-bottom">
             <a href="" class="project-learn-more"> LEARNE MORE </a>
           </div>
@@ -228,17 +228,28 @@
           <div class="text-bottom">
             <a href="" href="" class="project-learn-more">LEARNE MORE</a>
           </div>
-        </div>
+        </div> -->
       </div>
 
-      <div class="project-details" id="project-details">
-        <div class="dark-overlay" id="dark-overlay">
+      <dialog class="dark-overlay" id="dark-overlay">
+        <div class="project-details-container" id="project-details-container">
           <div class="caroussel">
-            <img src="./images/home.jpg" alt="" />
-            <div class="left-arrow">
+            <ul class="caroussel-container" id="caroussel-container">
+              <!-- <li class="caroussel-slide current-slide" id="caroussel-slide">
+                <img src="./images/home1.jpg" alt="" />
+              </li>
+              <li class="caroussel-slide" id="caroussel-slide">
+                <img src="./images/piquante1.PNG" alt="" />
+              </li>
+              <li class="caroussel-slide" id="caroussel-slide">
+                <img src="./images/ohmyfood1.PNG" alt="" />
+              </li> -->
+            </ul>
+
+            <div class="left-button" id="left-button">
               <span>&#60;</span>
             </div>
-            <div class="right-arrow">
+            <div class="right-button" id="right-button">
               <span>&#62;</span>
             </div>
             <span class="exit" id="project-details-exit">&#120;</span>
@@ -263,7 +274,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </dialog>
     </section>
 
     <section id="skilss"></section>

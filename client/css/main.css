@@ -397,16 +397,36 @@ html body {
   transform: scale(0.8);
 }
 
-@keyframes project-details-pop-up {
+@keyframes fade-in {
   0% {
-    display: none;
-    transform: scale(0);
     opacity: 0;
   }
   100% {
-    display: flex;
-    transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes growingUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes growingDown {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 #projects {
@@ -440,7 +460,10 @@ html body {
   display: flex;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
+}
+#projects .projects-container .project-topic:hover {
+  cursor: pointer;
 }
 #projects .projects-container .project-topic:hover .text-top {
   top: 0;
@@ -486,47 +509,70 @@ html body {
   justify-content: center;
   align-items: center;
   border-radius: 0.15vw;
+  cursor: pointer;
   width: 52%;
   text-decoration: none;
   color: black;
   height: 2.2vw;
   font-weight: 500;
   border: 0.12vw solid #e01b6c;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.15s linear;
 }
 #projects .projects-container .project-topic .text-bottom a:hover {
   background-color: #e01b6c;
   color: white;
 }
-#projects .project-details {
+#projects .dark-overlay {
   position: fixed;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  border: 1px solid black;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   padding: 0 29vw;
-  z-index: 2;
-  display: none;
 }
-#projects .project-details .dark-overlay {
+#projects .dark-overlay .project-details-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 85%;
   margin-top: 5vw;
-  animation: project-details-pop-up 0.3s linear;
 }
-#projects .project-details .dark-overlay .caroussel {
+#projects .dark-overlay .project-details-container .caroussel {
   display: flex;
   width: 100%;
   height: 60%;
   position: relative;
   border-radius: 0.5vw 0.5vw 0;
+  overflow: hidden;
 }
-#projects .project-details .dark-overlay .caroussel .left-arrow {
+#projects .dark-overlay .project-details-container .caroussel .caroussel-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: all 0.5s ease-in-out;
+}
+#projects .dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+#projects .dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3vw 0.3vw 0 0;
+}
+#projects .dark-overlay .project-details-container .caroussel .left-button {
   caret-color: transparent;
   display: flex;
   cursor: pointer;
@@ -543,7 +589,7 @@ html body {
   color: white;
   border-radius: 0 0.3vw 0.3vw 0;
 }
-#projects .project-details .dark-overlay .caroussel .right-arrow {
+#projects .dark-overlay .project-details-container .caroussel .right-button {
   caret-color: transparent;
   display: flex;
   cursor: pointer;
@@ -560,7 +606,7 @@ html body {
   color: white;
   border-radius: 0.3vw 0 0 0;
 }
-#projects .project-details .dark-overlay .caroussel .exit {
+#projects .dark-overlay .project-details-container .caroussel .exit {
   caret-color: transparent;
   display: flex;
   cursor: pointer;
@@ -577,13 +623,7 @@ html body {
   color: white;
   border-radius: 0 0.3vw 0 0.3vw;
 }
-#projects .project-details .dark-overlay .caroussel img {
-  display: flex;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 0.3vw 0.3vw 0 0;
-}
-#projects .project-details .dark-overlay .text-container {
+#projects .dark-overlay .project-details-container .text-container {
   display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
@@ -594,19 +634,19 @@ html body {
   border-radius: 0 0 0.3vw 0.3vw;
   border-top: 0.3vw solid black;
 }
-#projects .project-details .dark-overlay .text-container .h-line {
+#projects .dark-overlay .project-details-container .text-container .h-line {
   display: flex;
   width: 96%;
   border-top: 0.05vw solid grey;
 }
-#projects .project-details .dark-overlay .text-container .github {
+#projects .dark-overlay .project-details-container .text-container .github {
   background-color: black;
 }
-#projects .project-details .dark-overlay .text-container h4 {
+#projects .dark-overlay .project-details-container .text-container h4 {
   width: 100%;
   font-size: 1.5vw;
 }
-#projects .project-details .dark-overlay .text-container h5 {
+#projects .dark-overlay .project-details-container .text-container h5 {
   width: 100%;
   font-size: 1vw;
   color: grey;
@@ -614,7 +654,7 @@ html body {
   margin-bottom: 0.7vw;
   padding-bottom: 0.7vw;
 }
-#projects .project-details .dark-overlay .text-container a {
+#projects .dark-overlay .project-details-container .text-container a {
   text-decoration: none;
   color: white;
   background-color: #e01b6c;
@@ -627,12 +667,24 @@ html body {
   align-items: center;
   margin-bottom: 0.7vw;
 }
-#projects .project-details .dark-overlay .text-container .description {
+#projects .dark-overlay .project-details-container .text-container .description {
   width: 100%;
   text-justify: auto;
   font-size: 0.8vw;
   line-height: 1vw;
   margin-bottom: 0.4vw;
+}
+#projects .dark-overlay[open] {
+  animation: fade-in 0.15s linear forwards;
+}
+#projects .dark-overlay[open] .project-details-container {
+  animation: growingUp 0.15s linear forwards;
+}
+#projects .dark-overlay[closing] {
+  animation: fade-out 0.15s linear forwards;
+}
+#projects .dark-overlay[closing] .project-details-container {
+  animation: growingDown 0.15s linear forwards;
 }
 
 /*# sourceMappingURL=main.css.map */
