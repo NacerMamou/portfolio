@@ -1,0 +1,48 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vw 37vw;
+  width: 100%;
+  background-color: $background-color--2;
+  color: white;
+  & h2 {
+    display: flex;
+    font-size: 2vw;
+    margin-bottom: 2vw;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & input,
+    textarea {
+      display: flex;
+      width: 100%;
+      background-color: $background-color--3;
+      color: white;
+      border-radius: 0.2vw;
+      margin-bottom: 0.4vw;
+    }
+    & input {
+      padding: 0.4vw;
+      outline: none;
+      &::placeholder {
+        font-size: 0.9vw;
+      }
+      &[type="submit"] {
+        font-size: 0.9vw;
+        &:hover {
+          background-color: $color--10;
+        }
+      }
+    }
+
+    & textarea {
+      outline: none;
+      padding: 0.4vw;
+      font-size: 0.9vw;
+    }
+  }
+}

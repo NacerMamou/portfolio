@@ -12,6 +12,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- IMPOT DATA-->
+    <script src="./data/projects-data.js"></script>
     <title>NMAMOU Portfolio</title>
   </head>
 
@@ -230,54 +232,68 @@
           </div>
         </div> -->
       </div>
-
-      <dialog class="dark-overlay" id="dark-overlay">
-        <div class="project-details-container" id="project-details-container">
-          <div class="caroussel">
-            <ul class="caroussel-container" id="caroussel-container">
-              <!-- <li class="caroussel-slide current-slide" id="caroussel-slide">
-                <img src="./images/home1.jpg" alt="" />
-              </li>
-              <li class="caroussel-slide" id="caroussel-slide">
-                <img src="./images/piquante1.PNG" alt="" />
-              </li>
-              <li class="caroussel-slide" id="caroussel-slide">
-                <img src="./images/ohmyfood1.PNG" alt="" />
-              </li> -->
-            </ul>
-
-            <div class="left-button" id="left-button">
-              <span>&#60;</span>
-            </div>
-            <div class="right-button" id="right-button">
-              <span>&#62;</span>
-            </div>
-            <span class="exit" id="project-details-exit">&#120;</span>
-          </div>
-
-          <div class="text-container">
-            <h4>ChowNow Ordering Web</h4>
-            <h5>WHITE-LABEL ONLINE ORDERING SOLUTION</h5>
-            <a href="#">VIEW SITE</a>
-            <a href="" class="github">Github</a>
-            <p class="description">
-              ChowNow is a commission-free online ordering system and food
-              ordering app helping restaurants feed their hungry customers.
-            </p>
-            <p class="description">
-              ChowNow is a commission-free online ordering system and food
-              ordering app helping restaurants feed their hungry customers.
-            </p>
-            <p class="description">
-              ChowNow is a commission-free online ordering system and food
-              ordering app helping restaurants feed their hungry customers.
-            </p>
-          </div>
-        </div>
-      </dialog>
     </section>
 
-    <section id="skilss"></section>
+    <dialog class="dark-overlay" id="dark-overlay">
+      <div class="project-details-container" id="project-details-container">
+        <div class="caroussel">
+          <ul class="caroussel-container" id="caroussel-container">
+            <!-- <li class="caroussel-slide current-slide" id="caroussel-slide">
+              <img src="./images/home1.jpg" alt="" />
+            </li>
+            <li class="caroussel-slide" id="caroussel-slide">
+              <img src="./images/piquante1.PNG" alt="" />
+            </li>
+            <li class="caroussel-slide" id="caroussel-slide">
+              <img src="./images/ohmyfood1.PNG" alt="" />
+            </li> -->
+          </ul>
+
+          <div class="left-button" id="left-button">
+            <span>&#60;</span>
+          </div>
+          <div class="right-button" id="right-button">
+            <span>&#62;</span>
+          </div>
+          <span class="exit" id="project-details-exit">&#120;</span>
+        </div>
+
+        <div class="text-container" id="text-container">
+          <!-- <h4>ChowNow Ordering Web</h4>
+          <h5>WHITE-LABEL ONLINE ORDERING SOLUTION</h5>
+          <a id="demo-link" href="#">VIEW SITE</a>
+          <a id="github-link" href="" class="github">Github</a>
+          <p class="description">
+            ChowNow is a commission-free online ordering system and food
+            ordering app helping restaurants feed their hungry customers.
+          </p>
+          <p class="description">
+            ChowNow is a commission-free online ordering system and food
+            ordering app helping restaurants feed their hungry customers.
+          </p>
+          <p class="description">
+            ChowNow is a commission-free online ordering system and food
+            ordering app helping restaurants feed their hungry customers.
+          </p> -->
+        </div>
+      </div>
+    </dialog>
+
+    <section id="contact">
+      <h2 class="title">CONTACT</h2>
+      <form class="contact-form" id="contact-form">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <textarea
+          name="message"
+          placeholder="Your message"
+          id="message"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input type="submit" class="button" value="Submit" />
+      </form>
+    </section>
 
     <footer id="footer"></footer>
 

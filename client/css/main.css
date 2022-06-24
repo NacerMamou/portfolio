@@ -10,11 +10,13 @@ html {
   display: flex;
   width: 100%;
   flex-direction: column;
+  align-items: center;
 }
 html body {
   display: flex;
   width: 100%;
   flex-direction: column;
+  align-items: center;
 }
 
 .nav ul li {
@@ -79,8 +81,9 @@ html body {
 
 #home {
   display: flex;
+  width: 100%;
   align-items: center;
-  background: url(../images/home1.jpg);
+  background: url(../images/home.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -95,6 +98,7 @@ html body {
   align-items: center;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
+  display: flex;
 }
 #home .dark-overlay .text-container {
   display: flex;
@@ -431,18 +435,21 @@ html body {
 }
 #projects {
   display: flex;
+  width: 100%;
   flex-direction: column;
   background-color: #f5f5f5;
   padding: 6vw 20vw;
 }
 #projects h2 {
   display: flex;
+  width: 100%;
   justify-content: center;
   font-size: 1.8vw;
   margin-bottom: 4vw;
 }
 #projects .projects-container {
   display: flex;
+  justify-content: center;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -454,7 +461,6 @@ html body {
   height: 15vw;
   overflow: hidden;
   border-radius: 0.1vw;
-  box-shadow: 0 0 0.05vw #72e191;
 }
 #projects .projects-container .project-topic img {
   display: flex;
@@ -516,30 +522,31 @@ html body {
   height: 2.2vw;
   font-weight: 500;
   border: 0.12vw solid #e01b6c;
+  font-size: 1vw;
   transition: all 0.15s linear;
 }
 #projects .projects-container .project-topic .text-bottom a:hover {
   background-color: #e01b6c;
   color: white;
 }
-#projects .dark-overlay {
+
+#dark-overlay {
   position: fixed;
-  justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
   padding: 0 29vw;
 }
-#projects .dark-overlay .project-details-container {
+#dark-overlay .project-details-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 85%;
+  height: 40vw;
   margin-top: 5vw;
 }
-#projects .dark-overlay .project-details-container .caroussel {
+#dark-overlay .project-details-container .caroussel {
   display: flex;
   width: 100%;
   height: 60%;
@@ -547,7 +554,7 @@ html body {
   border-radius: 0.5vw 0.5vw 0;
   overflow: hidden;
 }
-#projects .dark-overlay .project-details-container .caroussel .caroussel-container {
+#dark-overlay .project-details-container .caroussel .caroussel-container {
   display: flex;
   position: relative;
   width: 100%;
@@ -557,7 +564,7 @@ html body {
   list-style: none;
   transition: all 0.5s ease-in-out;
 }
-#projects .dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide {
+#dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide {
   display: flex;
   position: absolute;
   top: 0;
@@ -565,14 +572,18 @@ html body {
   width: 100%;
   height: 100%;
 }
-#projects .dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide img {
+#dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide img {
   display: flex;
-  object-fit: cover;
+  object-fit: fill;
   width: 100%;
   height: 100%;
   border-radius: 0.3vw 0.3vw 0 0;
+  transition: all 0.5s ease-in-out;
 }
-#projects .dark-overlay .project-details-container .caroussel .left-button {
+#dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide img:hover {
+  transform: scale(1.03);
+}
+#dark-overlay .project-details-container .caroussel .left-button {
   caret-color: transparent;
   display: flex;
   cursor: pointer;
@@ -589,7 +600,7 @@ html body {
   color: white;
   border-radius: 0 0.3vw 0.3vw 0;
 }
-#projects .dark-overlay .project-details-container .caroussel .right-button {
+#dark-overlay .project-details-container .caroussel .right-button {
   caret-color: transparent;
   display: flex;
   cursor: pointer;
@@ -606,7 +617,7 @@ html body {
   color: white;
   border-radius: 0.3vw 0 0 0;
 }
-#projects .dark-overlay .project-details-container .caroussel .exit {
+#dark-overlay .project-details-container .caroussel .exit {
   caret-color: transparent;
   display: flex;
   cursor: pointer;
@@ -623,30 +634,24 @@ html body {
   color: white;
   border-radius: 0 0.3vw 0 0.3vw;
 }
-#projects .dark-overlay .project-details-container .text-container {
+#dark-overlay .project-details-container .text-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   overflow-y: auto;
   width: 100%;
   background-color: #f5f5f5;
-  min-height: 40%;
+  height: 40%;
   padding: 2vw 1.5vw;
   border-radius: 0 0 0.3vw 0.3vw;
   border-top: 0.3vw solid black;
 }
-#projects .dark-overlay .project-details-container .text-container .h-line {
+#dark-overlay .project-details-container .text-container h4 {
   display: flex;
-  width: 96%;
-  border-top: 0.05vw solid grey;
-}
-#projects .dark-overlay .project-details-container .text-container .github {
-  background-color: black;
-}
-#projects .dark-overlay .project-details-container .text-container h4 {
   width: 100%;
   font-size: 1.5vw;
 }
-#projects .dark-overlay .project-details-container .text-container h5 {
+#dark-overlay .project-details-container .text-container h5 {
+  display: flex;
   width: 100%;
   font-size: 1vw;
   color: grey;
@@ -654,7 +659,11 @@ html body {
   margin-bottom: 0.7vw;
   padding-bottom: 0.7vw;
 }
-#projects .dark-overlay .project-details-container .text-container a {
+#dark-overlay .project-details-container .text-container .buttons-container {
+  display: flex;
+  width: 100%;
+}
+#dark-overlay .project-details-container .text-container .buttons-container a {
   text-decoration: none;
   color: white;
   background-color: #e01b6c;
@@ -662,29 +671,82 @@ html body {
   height: 1.5vw;
   border-radius: 0.2vw;
   margin-right: 0.8vw;
+  font-size: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 0.7vw;
 }
-#projects .dark-overlay .project-details-container .text-container .description {
+#dark-overlay .project-details-container .text-container .buttons-container .github {
+  background-color: black;
+}
+#dark-overlay .project-details-container .text-container .description {
   width: 100%;
   text-justify: auto;
   font-size: 0.8vw;
   line-height: 1vw;
   margin-bottom: 0.4vw;
 }
-#projects .dark-overlay[open] {
+
+#dark-overlay[open] {
   animation: fade-in 0.15s linear forwards;
 }
-#projects .dark-overlay[open] .project-details-container {
+#dark-overlay[open] .project-details-container {
   animation: growingUp 0.15s linear forwards;
 }
-#projects .dark-overlay[closing] {
+
+#dark-overlay[closing] {
   animation: fade-out 0.15s linear forwards;
 }
-#projects .dark-overlay[closing] .project-details-container {
+#dark-overlay[closing] .project-details-container {
   animation: growingDown 0.15s linear forwards;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vw 37vw;
+  width: 100%;
+  background-color: #272636;
+  color: white;
+}
+#contact h2 {
+  display: flex;
+  font-size: 2vw;
+  margin-bottom: 2vw;
+}
+#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#contact .contact-form input,
+#contact .contact-form textarea {
+  display: flex;
+  width: 100%;
+  background-color: #1f222d;
+  color: white;
+  border-radius: 0.2vw;
+  margin-bottom: 0.4vw;
+}
+#contact .contact-form input {
+  padding: 0.4vw;
+  outline: none;
+}
+#contact .contact-form input::placeholder {
+  font-size: 0.9vw;
+}
+#contact .contact-form input[type=submit] {
+  font-size: 0.9vw;
+}
+#contact .contact-form input[type=submit]:hover {
+  background-color: #e01b6c;
+}
+#contact .contact-form textarea {
+  outline: none;
+  padding: 0.4vw;
+  font-size: 0.9vw;
 }
 
 /*# sourceMappingURL=main.css.map */
