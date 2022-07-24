@@ -1,4 +1,4 @@
-const apiUrl = "http://www.nmamou.com/mailing";
+const apiUrl = "https://www.nmamou.com/mailing";
 
 let numberOfImages;
 let xTranslationMax;
