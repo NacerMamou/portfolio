@@ -1,3 +1,5 @@
+const apiUrl = "http://www.nmamou.com/mailing";
+
 let numberOfImages;
 let xTranslationMax;
 let xTranslationAmount;
@@ -219,8 +221,6 @@ async function postRequest(url, reqObj) {
       });
   });
 }
-
-const apiUrl = "http://localhost:3000/mailing";
 
 async function sendMessage(url) {
   contactForm.addEventListener("submit", (e) => {

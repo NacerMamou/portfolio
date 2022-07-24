@@ -3,7 +3,7 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(80deg);
   }
 }
 
@@ -12,7 +12,7 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(-80deg);
   }
 }
 
@@ -33,6 +33,8 @@
     // border: 1px solid black;
     height: 22vw;
     padding-top: 3vw;
+    overflow: hidden;
+
     & img {
       display: flex;
       width: 13vw;
@@ -40,6 +42,10 @@
       border-radius: 50%;
       object-fit: cover;
       filter: brightness(1.2);
+      // transform: scale(1.2) translateY(35%);
+      background: linear-gradient(45deg, $color--1, $color--2);
+      // box-shadow: 0 0 0.2vw $color--1;
+      // border: 0.15vw solid $color--1;
     }
   }
   .text-container {
@@ -185,7 +191,8 @@
       border: 1px solid $color--1;
       background: linear-gradient(45deg, $color--8, $color--1);
       transform-origin: 50% 50%;
-      animation: forward-rotation $animation-duration ease-in-out infinite;
+      animation: forward-rotation alternate $animation-duration ease-in-out
+        infinite;
       .title {
         position: absolute;
         top: 9vw;
@@ -193,7 +200,8 @@
         font-weight: 600;
         font-size: 1.8vw;
         color: $color--10;
-        animation: backward-rotation $animation-duration ease-in-out infinite;
+        animation: backward-rotation $animation-duration ease-in-out infinite
+          alternate;
       }
       .rounded-topic {
         position: absolute;
@@ -211,7 +219,8 @@
         border: 1px solid $color--1;
         background-color: white;
         transform-origin: 50% 50%;
-        animation: backward-rotation $animation-duration ease-in-out infinite;
+        animation: backward-rotation $animation-duration ease-in-out infinite
+          alternate;
         & img {
           display: flex;
           width: 100%;
@@ -241,19 +250,22 @@
           transform: scale(0.7);
         }
       }
-      .cpp {
+      .mongodb {
         top: $position-type--3;
         left: $position-type--2;
+        & img {
+          transform: scale(0.8) translateY(-7%);
+        }
       }
       .git {
         top: $position-type--4;
         left: $position-type--4;
       }
-      .bootstrap {
+      .postgres {
         top: $position-type--4;
         left: $position-type--5;
         & img {
-          transform: scale(0.8);
+          transform: scale(0.75) translateY(-5%);
         }
       }
       .css {

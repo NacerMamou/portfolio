@@ -9,6 +9,7 @@
   padding: 0 20vw;
   padding-top: 1vw;
   background-color: white;
+  // background: transparent;
   border-bottom: 3px solid $color--1;
   z-index: 1;
   // box-shadow: 0 0 0.2vw $color--7;
@@ -34,7 +35,7 @@
       & li {
         padding: 0 0.8vw;
         & a {
-          color: black;
+          color: $color--6;
           padding: 0.2vw 0;
           opacity: 0.85;
           font-weight: 500;
@@ -54,12 +55,12 @@
   display: flex;
   width: 100%;
   align-items: center;
-  background: url(../images/home.jpg);
+  background: url(../images/tech3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   top: 20vw;
-  height: 95vh;
+  height: 100vh;
   .dark-overlay {
     color: white;
     display: flex;
@@ -83,10 +84,12 @@
         text-justify: center;
         margin-bottom: 0.5vw;
         // font-weight: 400;
+        text-shadow: 0 0 2vw $color--1;
         & strong {
           font-size: 1em;
           font-weight: 500;
-          color: $color--10;
+          color: $color--6;
+          text-shadow: 0 0 2vw $color--1;
         }
       }
 
@@ -97,6 +100,7 @@
         line-height: 1.5em;
         opacity: 0.8;
         margin-bottom: 1vw;
+        text-shadow: 0 0 2vw $color--1;
       }
 
       & a {
@@ -107,10 +111,12 @@
         font-weight: 600;
         text-decoration: none;
         color: white;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        text-shadow: 0 0 2vw $color--1;
         &:hover {
-          background-color: $color--10;
-          border-color: $color--10;
+          background-color: $color--6;
+          border-color: transparent;
+          box-shadow: 0 0 0.2vw $color--1;
         }
       }
     }
