@@ -134,6 +134,86 @@
       }
     }
   }
+  @media all and (max-width: 1025px) {
+    padding: 8vw 2vw;
+    & h2 {
+      font-size: 4vw;
+      margin-bottom: 4vw;
+    }
+
+    .projects-container {
+      .project-topic {
+        width: 33%;
+        height: 26vw;
+        & img {
+        }
+        .text-top {
+          padding-bottom: 1.2vw;
+          transition: all 0.4s ease-in-out;
+          & h3 {
+            font-size: 2.2vw;
+            margin-bottom: 0.2vw;
+          }
+          & p {
+          }
+        }
+        .text-bottom {
+          transition: all 0.4s ease-in-out;
+          & a {
+            border-radius: 0.15vw;
+            height: 3vw;
+            border: 0.12vw solid $color--10;
+            font-size: 2vw;
+            padding: 0 0;
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    padding: 8vw 4vw;
+    & h2 {
+      font-size: 7vw;
+      margin-bottom: 5vw;
+    }
+    .projects-container {
+      .project-topic {
+        width: 100%;
+        height: 80vw;
+        border-radius: 0.8vw;
+        box-shadow: 0 0 2vw white;
+        margin-bottom: 3.5vw;
+        & img {
+        }
+        .text-top {
+          padding-bottom: 1.2vw;
+          transition: all 0.4s ease-in-out;
+          & h3 {
+            font-size: 6.5vw;
+            margin-bottom: 0.2vw;
+          }
+          & p {
+            font-size: 5vw;
+          }
+        }
+        .text-bottom {
+          transition: all 0.4s ease-in-out;
+          & a {
+            border-radius: 0.15vw;
+            height: 7.5vw;
+            border: 0.12vw solid $color--10;
+            font-size: 4.5vw;
+            padding: 0 0;
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 #dark-overlay {
@@ -291,6 +371,137 @@
         font-size: 1.1vw;
         line-height: 1.5vw;
         margin-bottom: 0.4vw;
+      }
+    }
+  }
+  @media all and (max-width: 1025px) {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20vw 5vw;
+    .project-details-container {
+      height: 70vh;
+      .caroussel {
+        height: 63%;
+        border-radius: 0.5vw 0.5vw 0;
+        .caroussel-container {
+          .caroussel-slide {
+            & img {
+              border-radius: 0.3vw 0.3vw 0 0;
+            }
+          }
+        }
+        .left-button {
+          width: 6vw;
+          height: 6vw;
+          font-size: 2.3vw;
+          border-radius: 0 0.3vw 0.3vw 0;
+        }
+        .right-button {
+          width: 6vw;
+          height: 6vw;
+          font-size: 2.3vw;
+          border-radius: 0.3vw 0 0 0;
+        }
+        .exit {
+          width: 6vw;
+          height: 6vw;
+          font-size: 2.3vw;
+          border-radius: 0 0.3vw 0 0.3vw;
+        }
+      }
+      .text-container {
+        padding: 2vw 1.5vw;
+        border-radius: 0 0 0.3vw 0.3vw;
+        & h4 {
+          font-size: 3vw;
+        }
+        & h5 {
+          font-size: 2vw;
+          margin-bottom: 1.5vw;
+        }
+        .buttons-container {
+          & a {
+            width: 20%;
+            height: 3.2vw;
+            border-radius: 0.35vw;
+            margin-right: 1vw;
+            font-size: 2vw;
+            margin-bottom: 1.5vw;
+          }
+          .github {
+          }
+        }
+        .description {
+          font-size: 2.5vw;
+          line-height: 2.8vw;
+          margin-bottom: 1vw;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 577px) {
+    height: 100vh;
+    padding: 20vw 3vw;
+    .project-details-container {
+      height: 70vh;
+      .caroussel {
+        height: 55%;
+        border-radius: 0.5vw 0.5vw 0;
+        .caroussel-container {
+          .caroussel-slide {
+            & img {
+              border-radius: 0.3vw 0.3vw 0 0;
+            }
+          }
+        }
+        .left-button {
+          width: 10vw;
+          height: 10vw;
+          font-size: 5vw;
+          border-radius: 0 0.3vw 0.3vw 0;
+        }
+        .right-button {
+          width: 10vw;
+          height: 10vw;
+          font-size: 5vw;
+          border-radius: 0.3vw 0 0 0;
+        }
+        .exit {
+          width: 10vw;
+          height: 10vw;
+          font-size: 5vw;
+          border-radius: 0 0.3vw 0 0.3vw;
+        }
+      }
+      .text-container {
+        height: 45%;
+        padding: 2vw 1.5vw;
+        border-radius: 0 0 0.3vw 0.3vw;
+        & h4 {
+          font-size: 4.5vw;
+        }
+        & h5 {
+          font-size: 3.5vw;
+          margin-bottom: 1.5vw;
+        }
+        .buttons-container {
+          & a {
+            width: 48%;
+            height: 7vw;
+            border-radius: 0.35vw;
+            margin-right: 2vw;
+            font-size: 4vw;
+            margin-bottom: 1.5vw;
+          }
+          .github {
+          }
+        }
+        .description {
+          font-size: 4vw;
+          line-height: 4.5vw;
+          margin-bottom: 1vw;
+        }
       }
     }
   }

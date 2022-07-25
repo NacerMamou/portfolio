@@ -281,4 +281,335 @@
       }
     }
   }
+
+  @media all and (max-width: 1025px) {
+    padding: 4vw 2vw;
+    .image-container {
+      width: 50%;
+      padding-left: 13vw;
+      height: 22vw;
+      padding-top: 3vw;
+      & img {
+        display: flex;
+        width: 23vw;
+        height: 23vw;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .text-container {
+      width: 45%;
+      & h2 {
+        font-size: 4vw;
+        margin-bottom: 2.5vw;
+      }
+      & p {
+        font-size: 2vw;
+        line-height: 2.2vw;
+      }
+      & strong {
+      }
+    }
+    .education {
+      & h2 {
+        font-size: 4vw;
+        margin-bottom: 2vw;
+      }
+      .topic-container {
+        margin-bottom: 1.2vw;
+        border-radius: 0.35vw;
+        border: 0.18vw solid $border-color--1;
+        .header {
+          width: 70%;
+          padding: 0.65vw;
+          .logo {
+            width: 3vw;
+            height: 3vw;
+            border-radius: 0.2vw;
+            color: white;
+            background-color: $icon-background--1;
+            font-weight: 900;
+            margin-bottom: 0.6vw;
+          }
+          .sorbonne {
+            background-color: $icon-background--2;
+          }
+          .name {
+            margin-bottom: 0.2vw;
+            font-size: 2.3vw;
+          }
+          .title {
+            margin-bottom: 0.6vw;
+            font-size: 1.3vw;
+          }
+          .location {
+            margin-bottom: 0.2vw;
+            & i {
+              font-size: 1.5vw;
+              margin-right: 0.5vw;
+            }
+            & p {
+              font-size: 1.3vw;
+            }
+          }
+          .date {
+            & i {
+              font-size: 1.2vw;
+              margin-right: 0.5vw;
+            }
+            & p {
+              font-size: 1.2vw;
+            }
+          }
+        }
+        & img {
+          width: 35%;
+          height: 14vw;
+          border-radius: 0 0.45vw 0.45vw 0;
+        }
+      }
+    }
+    .skills {
+      width: 50%;
+      padding: 10vw 0 4vw 0;
+      .circle {
+        width: $circle-diameter-md;
+        height: $circle-diameter-md;
+        // animation: none;
+        .title {
+          position: absolute;
+          top: 13vw;
+          left: 6.8vw;
+          font-size: 3.1vw;
+          // animation: none;
+        }
+        .rounded-topic {
+          // box-shadow: 0 0 0.2vw gainsboro;
+          height: $topic-diameter-md;
+          width: $topic-diameter-md;
+          font-size: 1vw;
+          border: 1px solid $color--1;
+          animation: backward-rotation $animation-duration ease-in-out infinite
+            alternate;
+          // animation: none;
+          & img {
+            height: 100%;
+          }
+        }
+        .node {
+          top: $position-type--1-md;
+          left: $position-type--2-md;
+          & img {
+            transform: scale(0.8);
+          }
+        }
+        .react {
+          top: $position-type--2-md;
+          left: $position-type--1-md;
+          & img {
+            transform: scale(0.7);
+          }
+        }
+        .javascript {
+          top: $position-type--2-md;
+          left: $position-type--3-md;
+          & img {
+            transform: scale(0.7);
+          }
+        }
+        .mongodb {
+          top: $position-type--3-md;
+          left: $position-type--2-md;
+          & img {
+            transform: scale(0.8) translateY(-7%);
+          }
+        }
+        .git {
+          top: $position-type--4-md;
+          left: $position-type--4-md;
+        }
+        .postgres {
+          top: $position-type--4-md;
+          left: $position-type--5-md;
+          & img {
+            transform: scale(0.75) translateY(-5%);
+          }
+        }
+        .css {
+          top: $position-type--6-md;
+          left: $position-type--4-md;
+        }
+        .html {
+          top: $position-type--6-md;
+          left: $position-type--5-md;
+          & img {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    padding: 7vw 2vw;
+    .image-container {
+      width: 25%;
+      padding-left: 0vw;
+      height: 23vw;
+      padding-top: 3vw;
+      & img {
+        width: 30vw;
+        height: 30vw;
+        // border: 1px solid black;
+      }
+    }
+    .text-container {
+      width: 65%;
+      & h2 {
+        font-size: 7vw;
+        margin-bottom: 3vw;
+      }
+      & p {
+        font-size: 4vw;
+        line-height: 5vw;
+      }
+      & strong {
+      }
+    }
+    .education {
+      width: 100%;
+      padding-top: 10vw;
+      & h2 {
+        font-size: 7vw;
+        margin-bottom: 2vw;
+      }
+      .topic-container {
+        margin-bottom: 2vw;
+        border-radius: 0.35vw;
+        border: 0.18vw solid $border-color--1;
+        .header {
+          width: 70%;
+          padding: 0.65vw;
+          .logo {
+            width: 6vw;
+            height: 6vw;
+            border-radius: 0.5vw;
+            margin-bottom: 0.8vw;
+            font-size: 5vw;
+          }
+          .sorbonne {
+          }
+          .name {
+            margin-bottom: 0.2vw;
+            font-size: 5.5vw;
+          }
+          .title {
+            font-size: 3.5vw;
+          }
+          .location {
+            margin-bottom: 0.2vw;
+            & i {
+              font-size: 3vw;
+              margin-right: 0.8vw;
+            }
+            & p {
+              font-size: 3vw;
+            }
+          }
+          .date {
+            & i {
+              font-size: 3vw;
+              margin-right: 0.5vw;
+            }
+            & p {
+              font-size: 3vw;
+            }
+          }
+        }
+        & img {
+          width: 35%;
+          height: 30vw;
+          border-radius: 0 0.45vw 0.45vw 0;
+        }
+      }
+    }
+    .skills {
+      width: 100%;
+      padding: 18vw 2vw 14vw 2vw;
+      .circle {
+        width: $circle-diameter-s;
+        height: $circle-diameter-s;
+        // animation: none;
+        .title {
+          top: 30vw;
+          left: 16vw;
+          font-size: 7vw;
+          // animation: none;
+        }
+        .rounded-topic {
+          // box-shadow: 0 0 0.2vw gainsboro;
+          height: $topic-diameter-s;
+          width: $topic-diameter-s;
+          font-size: 1vw;
+          // background: linear-gradient(45deg, $color--1, white);
+          // animation: backward-rotation $animation-duration ease-in-out infinite
+          //   alternate;
+          // animation: none;
+          & img {
+            height: 100%;
+          }
+        }
+        .node {
+          top: $position-type--1-s;
+          left: $position-type--2-s;
+          & img {
+            transform: scale(0.8);
+          }
+        }
+        .react {
+          top: $position-type--2-s;
+          left: $position-type--1-s;
+          & img {
+            transform: scale(0.7);
+          }
+        }
+        .javascript {
+          top: $position-type--2-s;
+          left: $position-type--3-s;
+          & img {
+            transform: scale(0.7);
+          }
+        }
+        .mongodb {
+          top: $position-type--3-s;
+          left: $position-type--2-s;
+          & img {
+            transform: scale(0.8) translateY(-7%);
+          }
+        }
+        .git {
+          top: $position-type--4-s;
+          left: $position-type--4-s;
+        }
+        .postgres {
+          top: $position-type--4-s;
+          left: $position-type--5-s;
+          & img {
+            transform: scale(0.75) translateY(-5%);
+          }
+        }
+        .css {
+          top: $position-type--6-s;
+          left: $position-type--4-s;
+        }
+        .html {
+          top: $position-type--6-s;
+          left: $position-type--5-s;
+          & img {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
 }

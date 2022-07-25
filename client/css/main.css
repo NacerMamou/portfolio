@@ -78,6 +78,51 @@ html body {
   color: #e01b6c;
   opacity: 1;
 }
+@media all and (max-width: 1025px) {
+  #header {
+    width: 100%;
+    padding: 0 2vw;
+    padding-top: 1vw;
+    border-bottom: 2px solid #1ebab7;
+  }
+  #header .logo-container {
+    width: 25%;
+  }
+  #header .logo-container img {
+    height: 5.8vw;
+  }
+  #header .nav {
+    width: 75%;
+  }
+  #header .nav ul li {
+    padding: 0 1.5vw;
+  }
+  #header .nav ul li a {
+    font-size: 2vw;
+  }
+}
+@media all and (max-width: 576px) {
+  #header {
+    padding: 0 2vw;
+    padding-top: 1vw;
+    border-bottom: 2px solid #1ebab7;
+  }
+  #header .logo-container {
+    width: 30%;
+  }
+  #header .logo-container img {
+    height: 10vw;
+  }
+  #header .nav {
+    width: 70%;
+  }
+  #header .nav ul li {
+    padding: 0 1.5vw;
+  }
+  #header .nav ul li a {
+    font-size: 3.5vw;
+  }
+}
 
 #home {
   display: flex;
@@ -145,6 +190,58 @@ html body {
   background-color: #137691;
   border-color: transparent;
   box-shadow: 0 0 0.2vw #1ebab7;
+}
+@media all and (max-width: 1025px) {
+  #home {
+    top: 20vw;
+    height: 100vh;
+  }
+  #home .dark-overlay .text-container {
+    font-size: 2vw;
+  }
+  #home .dark-overlay .text-container h2 {
+    font-size: 2em;
+    text-shadow: 0 0 0vw #1ebab7;
+  }
+  #home .dark-overlay .text-container h2 strong {
+    text-shadow: 0 0 0vw #1ebab7;
+  }
+  #home .dark-overlay .text-container p {
+    line-height: 1.5em;
+    opacity: 0.8;
+    text-shadow: 0 0 0vw #1ebab7;
+  }
+  #home .dark-overlay .text-container a {
+    font-size: 2.7vw;
+    text-shadow: 0 0 2vw #1ebab7;
+    padding: 0.8vw 5vw;
+  }
+}
+@media all and (max-width: 577px) {
+  #home {
+    top: 20vw;
+    height: 100vh;
+  }
+  #home .dark-overlay .text-container {
+    font-size: 3vw;
+  }
+  #home .dark-overlay .text-container h2 {
+    font-size: 2em;
+    text-shadow: 0 0 0vw #1ebab7;
+  }
+  #home .dark-overlay .text-container h2 strong {
+    text-shadow: 0 0 0vw #1ebab7;
+  }
+  #home .dark-overlay .text-container p {
+    line-height: 1.5em;
+    opacity: 0.8;
+    text-shadow: 0 0 0vw #1ebab7;
+  }
+  #home .dark-overlay .text-container a {
+    font-size: 4vw;
+    text-shadow: 0 0 2vw #1ebab7;
+    padding: 1.2vw 8vw;
+  }
 }
 
 @keyframes forward-rotation {
@@ -410,6 +507,314 @@ html body {
 #about .skills .circle .html img {
   transform: scale(0.8);
 }
+@media all and (max-width: 1025px) {
+  #about {
+    padding: 4vw 2vw;
+  }
+  #about .image-container {
+    width: 50%;
+    padding-left: 13vw;
+    height: 22vw;
+    padding-top: 3vw;
+  }
+  #about .image-container img {
+    display: flex;
+    width: 23vw;
+    height: 23vw;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  #about .text-container {
+    width: 45%;
+  }
+  #about .text-container h2 {
+    font-size: 4vw;
+    margin-bottom: 2.5vw;
+  }
+  #about .text-container p {
+    font-size: 2vw;
+    line-height: 2.2vw;
+  }
+  #about .education h2 {
+    font-size: 4vw;
+    margin-bottom: 2vw;
+  }
+  #about .education .topic-container {
+    margin-bottom: 1.2vw;
+    border-radius: 0.35vw;
+    border: 0.18vw solid #f2f2f2;
+  }
+  #about .education .topic-container .header {
+    width: 70%;
+    padding: 0.65vw;
+  }
+  #about .education .topic-container .header .logo {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 0.2vw;
+    color: white;
+    background-color: #1ebab7;
+    font-weight: 900;
+    margin-bottom: 0.6vw;
+  }
+  #about .education .topic-container .header .sorbonne {
+    background-color: #ecbe00;
+  }
+  #about .education .topic-container .header .name {
+    margin-bottom: 0.2vw;
+    font-size: 2.3vw;
+  }
+  #about .education .topic-container .header .title {
+    margin-bottom: 0.6vw;
+    font-size: 1.3vw;
+  }
+  #about .education .topic-container .header .location {
+    margin-bottom: 0.2vw;
+  }
+  #about .education .topic-container .header .location i {
+    font-size: 1.5vw;
+    margin-right: 0.5vw;
+  }
+  #about .education .topic-container .header .location p {
+    font-size: 1.3vw;
+  }
+  #about .education .topic-container .header .date i {
+    font-size: 1.2vw;
+    margin-right: 0.5vw;
+  }
+  #about .education .topic-container .header .date p {
+    font-size: 1.2vw;
+  }
+  #about .education .topic-container img {
+    width: 35%;
+    height: 14vw;
+    border-radius: 0 0.45vw 0.45vw 0;
+  }
+  #about .skills {
+    width: 50%;
+    padding: 10vw 0 4vw 0;
+  }
+  #about .skills .circle {
+    width: 30vw;
+    height: 30vw;
+  }
+  #about .skills .circle .title {
+    position: absolute;
+    top: 13vw;
+    left: 6.8vw;
+    font-size: 3.1vw;
+  }
+  #about .skills .circle .rounded-topic {
+    height: 7.5vw;
+    width: 7.5vw;
+    font-size: 1vw;
+    border: 1px solid #1ebab7;
+    animation: backward-rotation 5s ease-in-out infinite alternate;
+  }
+  #about .skills .circle .rounded-topic img {
+    height: 100%;
+  }
+  #about .skills .circle .node {
+    top: -3.75vw;
+    left: 11.25vw;
+  }
+  #about .skills .circle .node img {
+    transform: scale(0.8);
+  }
+  #about .skills .circle .react {
+    top: 11.25vw;
+    left: -3.75vw;
+  }
+  #about .skills .circle .react img {
+    transform: scale(0.7);
+  }
+  #about .skills .circle .javascript {
+    top: 11.25vw;
+    left: 26.25vw;
+  }
+  #about .skills .circle .javascript img {
+    transform: scale(0.7);
+  }
+  #about .skills .circle .mongodb {
+    top: 26.25vw;
+    left: 11.25vw;
+  }
+  #about .skills .circle .mongodb img {
+    transform: scale(0.8) translateY(-7%);
+  }
+  #about .skills .circle .git {
+    top: 22.5vw;
+    left: 22.5vw;
+  }
+  #about .skills .circle .postgres {
+    top: 22.5vw;
+    left: 0.2vw;
+  }
+  #about .skills .circle .postgres img {
+    transform: scale(0.75) translateY(-5%);
+  }
+  #about .skills .circle .css {
+    top: 1vw;
+    left: 22.5vw;
+  }
+  #about .skills .circle .html {
+    top: 1vw;
+    left: 0.2vw;
+  }
+  #about .skills .circle .html img {
+    transform: scale(0.8);
+  }
+}
+@media all and (max-width: 576px) {
+  #about {
+    padding: 7vw 2vw;
+  }
+  #about .image-container {
+    width: 25%;
+    padding-left: 0vw;
+    height: 23vw;
+    padding-top: 3vw;
+  }
+  #about .image-container img {
+    width: 30vw;
+    height: 30vw;
+  }
+  #about .text-container {
+    width: 65%;
+  }
+  #about .text-container h2 {
+    font-size: 7vw;
+    margin-bottom: 3vw;
+  }
+  #about .text-container p {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+  #about .education {
+    width: 100%;
+    padding-top: 10vw;
+  }
+  #about .education h2 {
+    font-size: 7vw;
+    margin-bottom: 2vw;
+  }
+  #about .education .topic-container {
+    margin-bottom: 2vw;
+    border-radius: 0.35vw;
+    border: 0.18vw solid #f2f2f2;
+  }
+  #about .education .topic-container .header {
+    width: 70%;
+    padding: 0.65vw;
+  }
+  #about .education .topic-container .header .logo {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 0.5vw;
+    margin-bottom: 0.8vw;
+    font-size: 5vw;
+  }
+  #about .education .topic-container .header .name {
+    margin-bottom: 0.2vw;
+    font-size: 5.5vw;
+  }
+  #about .education .topic-container .header .title {
+    font-size: 3.5vw;
+  }
+  #about .education .topic-container .header .location {
+    margin-bottom: 0.2vw;
+  }
+  #about .education .topic-container .header .location i {
+    font-size: 3vw;
+    margin-right: 0.8vw;
+  }
+  #about .education .topic-container .header .location p {
+    font-size: 3vw;
+  }
+  #about .education .topic-container .header .date i {
+    font-size: 3vw;
+    margin-right: 0.5vw;
+  }
+  #about .education .topic-container .header .date p {
+    font-size: 3vw;
+  }
+  #about .education .topic-container img {
+    width: 35%;
+    height: 30vw;
+    border-radius: 0 0.45vw 0.45vw 0;
+  }
+  #about .skills {
+    width: 100%;
+    padding: 18vw 2vw 14vw 2vw;
+  }
+  #about .skills .circle {
+    width: 70vw;
+    height: 70vw;
+  }
+  #about .skills .circle .title {
+    top: 30vw;
+    left: 16vw;
+    font-size: 7vw;
+  }
+  #about .skills .circle .rounded-topic {
+    height: 17vw;
+    width: 17vw;
+    font-size: 1vw;
+  }
+  #about .skills .circle .rounded-topic img {
+    height: 100%;
+  }
+  #about .skills .circle .node {
+    top: -8.5vw;
+    left: 26.5vw;
+  }
+  #about .skills .circle .node img {
+    transform: scale(0.8);
+  }
+  #about .skills .circle .react {
+    top: 26.5vw;
+    left: -8.5vw;
+  }
+  #about .skills .circle .react img {
+    transform: scale(0.7);
+  }
+  #about .skills .circle .javascript {
+    top: 26.5vw;
+    left: 61.5vw;
+  }
+  #about .skills .circle .javascript img {
+    transform: scale(0.7);
+  }
+  #about .skills .circle .mongodb {
+    top: 61.5vw;
+    left: 26.5vw;
+  }
+  #about .skills .circle .mongodb img {
+    transform: scale(0.8) translateY(-7%);
+  }
+  #about .skills .circle .git {
+    top: 51vw;
+    left: 51vw;
+  }
+  #about .skills .circle .postgres {
+    top: 51vw;
+    left: 0.2vw;
+  }
+  #about .skills .circle .postgres img {
+    transform: scale(0.75) translateY(-5%);
+  }
+  #about .skills .circle .css {
+    top: 1vw;
+    left: 51vw;
+  }
+  #about .skills .circle .html {
+    top: 1vw;
+    left: 0.2vw;
+  }
+  #about .skills .circle .html img {
+    transform: scale(0.8);
+  }
+}
 
 @keyframes fade-in {
   0% {
@@ -542,6 +947,74 @@ html body {
 #projects .projects-container .project-topic .text-bottom a:hover {
   background-color: #e01b6c;
   color: white;
+}
+@media all and (max-width: 1025px) {
+  #projects {
+    padding: 8vw 2vw;
+  }
+  #projects h2 {
+    font-size: 4vw;
+    margin-bottom: 4vw;
+  }
+  #projects .projects-container .project-topic {
+    width: 33%;
+    height: 26vw;
+  }
+  #projects .projects-container .project-topic .text-top {
+    padding-bottom: 1.2vw;
+    transition: all 0.4s ease-in-out;
+  }
+  #projects .projects-container .project-topic .text-top h3 {
+    font-size: 2.2vw;
+    margin-bottom: 0.2vw;
+  }
+  #projects .projects-container .project-topic .text-bottom {
+    transition: all 0.4s ease-in-out;
+  }
+  #projects .projects-container .project-topic .text-bottom a {
+    border-radius: 0.15vw;
+    height: 3vw;
+    border: 0.12vw solid #e01b6c;
+    font-size: 2vw;
+    padding: 0 0;
+  }
+}
+@media all and (max-width: 576px) {
+  #projects {
+    padding: 8vw 4vw;
+  }
+  #projects h2 {
+    font-size: 7vw;
+    margin-bottom: 5vw;
+  }
+  #projects .projects-container .project-topic {
+    width: 100%;
+    height: 80vw;
+    border-radius: 0.8vw;
+    box-shadow: 0 0 2vw white;
+    margin-bottom: 3.5vw;
+  }
+  #projects .projects-container .project-topic .text-top {
+    padding-bottom: 1.2vw;
+    transition: all 0.4s ease-in-out;
+  }
+  #projects .projects-container .project-topic .text-top h3 {
+    font-size: 6.5vw;
+    margin-bottom: 0.2vw;
+  }
+  #projects .projects-container .project-topic .text-top p {
+    font-size: 5vw;
+  }
+  #projects .projects-container .project-topic .text-bottom {
+    transition: all 0.4s ease-in-out;
+  }
+  #projects .projects-container .project-topic .text-bottom a {
+    border-radius: 0.15vw;
+    height: 7.5vw;
+    border: 0.12vw solid #e01b6c;
+    font-size: 4.5vw;
+    padding: 0 0;
+  }
 }
 
 #dark-overlay {
@@ -699,6 +1172,124 @@ html body {
   line-height: 1.5vw;
   margin-bottom: 0.4vw;
 }
+@media all and (max-width: 1025px) {
+  #dark-overlay {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20vw 5vw;
+  }
+  #dark-overlay .project-details-container {
+    height: 70vh;
+  }
+  #dark-overlay .project-details-container .caroussel {
+    height: 63%;
+    border-radius: 0.5vw 0.5vw 0;
+  }
+  #dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide img {
+    border-radius: 0.3vw 0.3vw 0 0;
+  }
+  #dark-overlay .project-details-container .caroussel .left-button {
+    width: 6vw;
+    height: 6vw;
+    font-size: 2.3vw;
+    border-radius: 0 0.3vw 0.3vw 0;
+  }
+  #dark-overlay .project-details-container .caroussel .right-button {
+    width: 6vw;
+    height: 6vw;
+    font-size: 2.3vw;
+    border-radius: 0.3vw 0 0 0;
+  }
+  #dark-overlay .project-details-container .caroussel .exit {
+    width: 6vw;
+    height: 6vw;
+    font-size: 2.3vw;
+    border-radius: 0 0.3vw 0 0.3vw;
+  }
+  #dark-overlay .project-details-container .text-container {
+    padding: 2vw 1.5vw;
+    border-radius: 0 0 0.3vw 0.3vw;
+  }
+  #dark-overlay .project-details-container .text-container h4 {
+    font-size: 3vw;
+  }
+  #dark-overlay .project-details-container .text-container h5 {
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  #dark-overlay .project-details-container .text-container .buttons-container a {
+    width: 20%;
+    height: 3.2vw;
+    border-radius: 0.35vw;
+    margin-right: 1vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  #dark-overlay .project-details-container .text-container .description {
+    font-size: 2.5vw;
+    line-height: 2.8vw;
+    margin-bottom: 1vw;
+  }
+}
+@media all and (max-width: 577px) {
+  #dark-overlay {
+    height: 100vh;
+    padding: 20vw 3vw;
+  }
+  #dark-overlay .project-details-container {
+    height: 70vh;
+  }
+  #dark-overlay .project-details-container .caroussel {
+    height: 55%;
+    border-radius: 0.5vw 0.5vw 0;
+  }
+  #dark-overlay .project-details-container .caroussel .caroussel-container .caroussel-slide img {
+    border-radius: 0.3vw 0.3vw 0 0;
+  }
+  #dark-overlay .project-details-container .caroussel .left-button {
+    width: 10vw;
+    height: 10vw;
+    font-size: 5vw;
+    border-radius: 0 0.3vw 0.3vw 0;
+  }
+  #dark-overlay .project-details-container .caroussel .right-button {
+    width: 10vw;
+    height: 10vw;
+    font-size: 5vw;
+    border-radius: 0.3vw 0 0 0;
+  }
+  #dark-overlay .project-details-container .caroussel .exit {
+    width: 10vw;
+    height: 10vw;
+    font-size: 5vw;
+    border-radius: 0 0.3vw 0 0.3vw;
+  }
+  #dark-overlay .project-details-container .text-container {
+    height: 45%;
+    padding: 2vw 1.5vw;
+    border-radius: 0 0 0.3vw 0.3vw;
+  }
+  #dark-overlay .project-details-container .text-container h4 {
+    font-size: 4.5vw;
+  }
+  #dark-overlay .project-details-container .text-container h5 {
+    font-size: 3.5vw;
+    margin-bottom: 1.5vw;
+  }
+  #dark-overlay .project-details-container .text-container .buttons-container a {
+    width: 48%;
+    height: 7vw;
+    border-radius: 0.35vw;
+    margin-right: 2vw;
+    font-size: 4vw;
+    margin-bottom: 1.5vw;
+  }
+  #dark-overlay .project-details-container .text-container .description {
+    font-size: 4vw;
+    line-height: 4.5vw;
+    margin-bottom: 1vw;
+  }
+}
 
 #dark-overlay[open] {
   animation: fade-in 0.15s linear forwards;
@@ -759,6 +1350,60 @@ html body {
   outline: none;
   padding: 0.4vw;
   font-size: 0.9vw;
+}
+@media all and (max-width: 1025px) {
+  #contact {
+    padding: 4vw 20vw;
+  }
+  #contact h2 {
+    font-size: 4vw;
+    margin-bottom: 3vw;
+  }
+  #contact .contact-form input,
+#contact .contact-form textarea {
+    border-radius: 0.3vw;
+    margin-bottom: 0.6vw;
+  }
+  #contact .contact-form input {
+    padding: 0.8vw;
+  }
+  #contact .contact-form input::placeholder {
+    font-size: 1.8vw;
+  }
+  #contact .contact-form input[type=submit] {
+    font-size: 1.8vw;
+  }
+  #contact .contact-form textarea {
+    font-size: 1.8vw;
+  }
+}
+@media all and (max-width: 570px) {
+  #contact {
+    padding: 10vw 3vw;
+  }
+  #contact h2 {
+    font-size: 7vw;
+    margin-bottom: 3vw;
+  }
+  #contact .contact-form input,
+#contact .contact-form textarea {
+    border-radius: 0.3vw;
+    margin-bottom: 1.5vw;
+  }
+  #contact .contact-form input {
+    padding: 1.5vw;
+  }
+  #contact .contact-form input::placeholder {
+    font-size: 3.8vw;
+  }
+  #contact .contact-form input[type=submit] {
+    font-size: 3.8vw;
+    padding: 2vw;
+  }
+  #contact .contact-form textarea {
+    font-size: 3.8vw;
+    padding: 2vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

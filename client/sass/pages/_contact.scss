@@ -45,4 +45,64 @@
       font-size: 0.9vw;
     }
   }
+
+  @media all and (max-width: 1025px) {
+    padding: 4vw 20vw;
+    & h2 {
+      font-size: 4vw;
+      margin-bottom: 3vw;
+    }
+    .contact-form {
+      & input,
+      textarea {
+        border-radius: 0.3vw;
+        margin-bottom: 0.6vw;
+      }
+      & input {
+        padding: 0.8vw;
+        &::placeholder {
+          font-size: 1.8vw;
+        }
+        &[type="submit"] {
+          font-size: 1.8vw;
+          &:hover {
+          }
+        }
+      }
+      & textarea {
+        font-size: 1.8vw;
+      }
+    }
+  }
+
+  @media all and (max-width: 570px) {
+    padding: 10vw 3vw;
+    & h2 {
+      font-size: 7vw;
+      margin-bottom: 3vw;
+    }
+    .contact-form {
+      & input,
+      textarea {
+        border-radius: 0.3vw;
+        margin-bottom: 1.5vw;
+      }
+      & input {
+        padding: 1.5vw;
+        &::placeholder {
+          font-size: 3.8vw;
+        }
+        &[type="submit"] {
+          font-size: 3.8vw;
+          padding: 2vw;
+          &:hover {
+          }
+        }
+      }
+      & textarea {
+        font-size: 3.8vw;
+        padding: 2vw;
+      }
+    }
+  }
 }

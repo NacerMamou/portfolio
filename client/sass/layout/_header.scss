@@ -49,6 +49,56 @@
       }
     }
   }
+  @media all and (max-width: 1025px) {
+    width: 100%;
+    padding: 0 2vw;
+    padding-top: 1vw;
+    border-bottom: 2px solid $color--1;
+    .logo-container {
+      width: 25%;
+      & img {
+        height: 5.8vw;
+      }
+    }
+    .nav {
+      width: 75%;
+      & ul {
+        & li {
+          padding: 0 1.5vw;
+          & a {
+            font-size: 2vw;
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    padding: 0 2vw;
+    padding-top: 1vw;
+    border-bottom: 2px solid $color--1;
+    .logo-container {
+      width: 30%;
+      & img {
+        height: 10vw;
+      }
+    }
+    .nav {
+      width: 70%;
+      & ul {
+        & li {
+          padding: 0 1.5vw;
+          & a {
+            font-size: 3.5vw;
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 #home {
@@ -92,7 +142,6 @@
           text-shadow: 0 0 2vw $color--1;
         }
       }
-
       & p {
         text-align: center;
         font-size: 2em;
@@ -117,6 +166,66 @@
           background-color: $color--6;
           border-color: transparent;
           box-shadow: 0 0 0.2vw $color--1;
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 1025px) {
+    top: 20vw;
+    height: 100vh;
+    .dark-overlay {
+      .text-container {
+        font-size: 2vw;
+        & h2 {
+          font-size: 2em;
+          text-shadow: 0 0 0vw $color--1;
+          & strong {
+            text-shadow: 0 0 0vw $color--1;
+          }
+        }
+        & p {
+          line-height: 1.5em;
+          opacity: 0.8;
+          text-shadow: 0 0 0vw $color--1;
+        }
+
+        & a {
+          font-size: 2.7vw;
+          text-shadow: 0 0 2vw $color--1;
+          padding: 0.8vw 5vw;
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 577px) {
+    top: 20vw;
+    height: 100vh;
+    .dark-overlay {
+      .text-container {
+        font-size: 3vw;
+        & h2 {
+          font-size: 2em;
+          text-shadow: 0 0 0vw $color--1;
+          & strong {
+            text-shadow: 0 0 0vw $color--1;
+          }
+        }
+        & p {
+          line-height: 1.5em;
+          opacity: 0.8;
+          text-shadow: 0 0 0vw $color--1;
+        }
+
+        & a {
+          font-size: 4vw;
+          text-shadow: 0 0 2vw $color--1;
+          padding: 1.2vw 8vw;
+          &:hover {
+          }
         }
       }
     }
